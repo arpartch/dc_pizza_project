@@ -1,3 +1,63 @@
+body {
+    background-image: url('./images/background.jpg');
+    text-align: center;
+    display: flex;
+    display: grid;
+    font-family: 'Press Start 2P', cursive;
+}
+
 h1 {
-    color: turquoise
+    color: turquoise;
+}
+
+h2 {
+    color: turquoise;
+    
+}
+
+p {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+h3 {
+    color: turquoise;
+    font-family: 'Press Start 2P', cursive;
+}
+
+h4 {
+    font-family: 'Press Start 2P', cursive;
+}
+
+form {
+    text-align: center;
+}
+
+.ordering{
+    font-family: 'Orbitron', sans-serif;
+}
+
+.billing {
+    display: grid;
+    color: white;
+    padding: 57px 65px;
+    padding-bottom: 65px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.payment {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.sameadr {
+    color: white;
+}
+
+h4 {
+    color: turquoise;
+}
+
+.ordering {
+    color: white;
 }
