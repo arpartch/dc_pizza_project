@@ -28,20 +28,34 @@ h3 {
 h4 {
     font-family: 'Press Start 2P', cursive;
 }
-
+h5 {
+    font-weight: bolder;
+}
 form {
     text-align: center;
 }
 
-.ordering{
+.ordering {
     font-family: 'Orbitron', sans-serif;
+    border-style: groove;
+    border-width: 12px;
+    border-color: silver;
 }
 
-.billing {
+.orderContainer {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
     color: white;
-    padding: 57px 65px;
-    padding-bottom: 65px;
+    
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
     font-family: 'Orbitron', sans-serif;
 }
 
