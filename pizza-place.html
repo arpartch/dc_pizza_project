@@ -3,49 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title on browser tab -->
     <title>The Cellar</title>
+    <!-- added fonts from google -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Press+Start+2P&display=swap" rel="stylesheet">
+<!-- link to css stylesheet -->
     <link rel="stylesheet" href="pizza-place-style.css">
 </head>
 <body>
     <main>
-        <h1>The Cellar</h1>
-        <img src="theCellarLogo.jpg">
+      <!-- header of the webpage -->
+        <h1>The Cellar</h1> 
+        <!-- cellar logo -->
+        <img src="./images/theCellarLogo0.jpg">
         <div>
+          <!-- information about the pizza shop -->
             <h2>About</h2>
             <p>The Cellar is University of Puget Sound’s late-night pizza joint. From dinner to a late-night snack, The Cellar has students, and the campus community covered! We serve everything from pizza and ice cream to sandwiches and bruschetta! Located in the basement, The Cellar offers a student-run dining experience.</p>
         </div>
-        <div class="row">
+        <!-- container for order form -->
+            <div class="ordering">
+                <h4>Pizza Size
+                  <span class="price" style="color:black">
+                    <i class="fa fa-shopping-cart"></i>
+                  </span>
+                </h4>
+                <select name="size" id="size" form="pizzaform">
+                    <option value="small">small</option>
+                    <option value="medium">medium</option>
+                    <option value="large">large</option>
+                </select></p>
+                <div class="orderContainer">
+                  <div class="sauce">
+                    <p><h4>Sauce</h4>
+                      <input type="radio" id="sauce" name="marinara" value="base">
+                      <label for="marinara">marinara</label><br>
+                      <input type="radio" id="sauce" name="barbecue" value="base">
+                      <label for="barbecue">barbecue</label><br>
+                      <input type="radio" id="sauce" name="ranch" value="base">
+                      <label for="ranch">ranch</label><br>
+                  </div>
+                  <div class="meat">
+                    <p><h4>Meat Toppings</h4>
+                      <input type="radio" id="meat topping" name="pepperoni" value="meat">
+                      <label for="pepperoni">pepperoni</label><br>
+                      <input type="radio" id="meat topping" name="sausage" value="meat">
+                      <label for="sausage">sausage</label><br>
+                      <input type="radio" id="meat topping" name="ham" value="meat">
+                      <label for="ham">ham</label><br>
+                      <input type="radio" id="meat topping" name="bacon" value="meat">
+                      <label for="bacon">bacon</label><br>
+                      <input type="radio" id="meat topping" name="chicken" value="meat">
+                      <label for="chicken">chicken</label><br>
+                    </div>
+                  <div class="veggies">
+                    <p><h4>Veggie Toppings</h4>
+                      <input type="radio" id="veggie topping" name="olive" value="veggie">
+                      <label for="olive">olive</label><br>
+                      <input type="radio" id="veggie topping" name="green pepper" value="veggie">
+                      <label for="green pepper">green pepper</label><br>
+                      <input type="radio" id="veggie topping" name="garlic" value="veggie">
+                      <label for="galic">garlic</label><br>
+                      <input type="radio" id="veggie topping" name="pineapple" value="veggie">
+                      <label for="pineapple">pineapple</label><br>
+                      <input type="radio" id="veggie topping" name="onion" value="veggie">
+                      <label for="onion">onion</label><br>
+                      <input type="radio" id="veggie topping" name="mushroom" value="veggie">
+                      <label for="mushroom">mushroom</label><br>
+                  </div>
+                </div>
+                </p>
+                  <textarea name="comment" form="pizzaform">Special requests...</textarea>
+                <p><input type="checkbox" id="member" name="member" value="member">
+                    <label for="member"> REWARDS MEMBER</label><br>
+                    <input type="checkbox" id="non member" name="non member" value="non member">
+                    <label for="non member"> Sadly I'm NOT a rewards member</label><br>
+                    <input type="submit" value="Submit">
+                </p>
+
+            </div>
+          </div>
+          <div class="row">
             <div class="col-75">
               <div class="container">
                 <form action="/action_page.php" id="pizzaform">
-          
-                  <div class="row">
-                    <div class="col-50">
-                      <h3>Billing Address</h3>
-                      <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                      <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-                      <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                      <input type="text" id="email" name="email" placeholder="john@example.com">
-                      <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                      <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-                      <label for="city"><i class="fa fa-institution"></i> City</label>
-                      <input type="text" id="city" name="city" placeholder="New York">
-          
-                      <div class="row">
-                        <div class="col-50">
-                          <label for="state">State</label>
-                          <input type="text" id="state" name="state" placeholder="NY">
-                        </div>
-                        <div class="col-50">
-                          <label for="zip">Zip</label>
-                          <input type="text" id="zip" name="zip" placeholder="10001">
-                        </div>
-                      </div>
-                    </div>
-          
-                    <div class="col-50">
+
+                    <div class="col-50 payment">
                       <h3>Payment</h3>
-                      <label for="fname">Payment Info</label>
                       <div class="icon-container">
                         <i class="fa fa-cc-visa" style="color:navy;"></i>
                         <i class="fa fa-cc-amex" style="color:blue;"></i>
@@ -67,57 +112,41 @@
                         <div class="col-50">
                           <label for="cvv">CVV</label>
                           <input type="text" id="cvv" name="cvv" placeholder="352">
+
                         </div>
                       </div>
                     </div>
           
+                  <div class="row">
+                    <h3>Delivery Address</h3>
+                    <div class="billing">
+                      <div class="name">
+                      <label for="fname"><i class="fa fa-user"></i> First Name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Zaphod">
+                      <label for="lname"><i class="fa fa-user"></i> Last Name</label>
+                      <input type="text" id="lname" name="lastname" placeholder="Beeblebrox">
+                      <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                      <input type="text" id="email" name="email" placeholder="john@example.com">
+                    </div>
+                    <div class="address">
+                      <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                      <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                      <label for="city"><i class="fa fa-institution"></i> City</label>
+                      <input type="text" id="city" name="city" placeholder="New York">
+                      <label for="state">State</label>
+                      <input type="text" id="state" name="state" placeholder="NY">
+                      <label for="zip">Zip</label>
+                      <input type="text" id="zip" name="zip" placeholder="10001">
+                    </div>
+                    </div>
+          
                   </div>
-                  <label>
-                    <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                  <label class="sameadr">
+                    <input type="checkbox" checked="checked" name="sameadr"> Billing address same as delivery
                   </label>
                 </form>
               </div>
             </div>
-          
-            <div class="col-25">
-              <div class="container">
-                <h4>Your Order
-                  <span class="price" style="color:black">
-                    <i class="fa fa-shopping-cart"></i>
-                    <b>4</b>
-                  </span>
-                </h4>
-                <p><label for="size">Pizza Size</label>
-                <select name="size" id="size" form="pizzaform">
-                    <option value="small">small</option>
-                    <option value="medium">medium</option>
-                    <option value="large">large</option>
-                </select></p>
-                <p><h5>Topping</h5>
-                    <input type="radio" id="meat topping" name="pepperoni" value="meat">
-                    <label for="pepperoni">pepperoni</label><br>
-                    <input type="radio" id="meat topping" name="sausage" value="meat">
-                    <label for="sausage">sausage</label><br>
-                    <input type="radio" id="meat topping" name="ham" value="meat">
-                    <label for="ham">ham</label><br><br>
-                <p><h5>Topping 2</h5>
-                    <input type="radio" id="veggie topping" name="olive" value="veggie">
-                    <label for="olive">olive</label><br>
-                    <input type="radio" id="veggie topping" name="green pepper" value="veggie">
-                    <label for="green pepper">green pepper</label><br>
-                    <input type="radio" id="veggie topping" name="garlic" value="veggie">
-                    <label for="galic">garlic</label><br><br>
-                </p>
-                  <textarea name="comment" form="pizzaform">Special requests...</textarea>
-                <p><input type="checkbox" id="member" name="member" value="member">
-                    <label for="member"> REWARDS MEMBER</label><br>
-                    <input type="checkbox" id="non member" name="non member" value="non member">
-                    <label for="non member"> Sadly I'm NOT a rewards member</label><br>
-                    <input type="submit" value="Submit">
-                </p>
-              </div>
-            </div>
-          </div>
     </main>
     <script src="pizza-place.js"></script>
 </body>

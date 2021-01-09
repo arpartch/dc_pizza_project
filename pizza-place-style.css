@@ -1,3 +1,77 @@
+body {
+    background-image: url('./images/background.jpg');
+    text-align: center;
+    display: flex;
+    display: grid;
+    font-family: 'Press Start 2P', cursive;
+}
+
 h1 {
-    color: turquoise
+    color: turquoise;
+}
+
+h2 {
+    color: turquoise;
+    
+}
+
+p {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+h3 {
+    color: turquoise;
+    font-family: 'Press Start 2P', cursive;
+}
+
+h4 {
+    font-family: 'Press Start 2P', cursive;
+}
+h5 {
+    font-weight: bolder;
+}
+form {
+    text-align: center;
+}
+
+.ordering {
+    font-family: 'Orbitron', sans-serif;
+    border-style: groove;
+    border-width: 12px;
+    border-color: silver;
+}
+
+.orderContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    color: white;
+    
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.payment {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.sameadr {
+    color: white;
+}
+
+h4 {
+    color: turquoise;
+}
+
+.ordering {
+    color: white;
 }
